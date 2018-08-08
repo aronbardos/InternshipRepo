@@ -7,7 +7,7 @@ public class Constants {
     public static final String URL_SUCCESSFUL_ORDER        = "http://qa1.dev.evozon.com/checkout/onepage/success/";
     public static final String URL_MY_ACCOUNT              = "http://qa1.dev.evozon.com/customer/account/";
     public static final String URL_REGISTER                = "http://qa1.dev.evozon.com/customer/account/create/";
-    public static final String URL_LOGIN                   = "http://qa1.dev.evozon.com/customer/account/loginWithValidCredentials/";
+    public static final String URL_LOGIN                   = "http://qa1.dev.evozon.com/customer/account/login/";
     public static final String URL_SUCCESSFUL_REGISTRATION = "http://qa1.dev.evozon.com/customer/account/index/";
 
     /*Language options*/

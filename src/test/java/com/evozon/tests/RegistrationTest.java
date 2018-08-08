@@ -15,7 +15,7 @@ public class RegistrationTest extends BaseTest {
     @Steps
     public UserSteps userSteps;
 
-    /*Register CSV fields*/
+    /*CSV fields*/
     String firstname;
     String lastname;
     String email;

@@ -44,12 +44,13 @@ public class UserSteps {
         Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_REGISTRATION);
     }
     @Step
-    public void login() {
+    public void login(String email, String password) {
         homePage.open();
         headerPage.clickAccountbutton();
         headerPage.clickLoginOption();
-        loginPage.fillFields();
+        loginPage.fillFields(email, password);
         loginPage.clickLoginButton();
+        Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_MY_ACCOUNT);
     }
     @Step
     public void addProductToCart() {
