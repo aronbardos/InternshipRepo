@@ -1,6 +1,6 @@
 package com.evozon.steps;
 
-import com.evozon.entities.UserRegister;
+import com.evozon.entities.User;
 import com.evozon.pages.*;
 import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Step;
@@ -35,7 +35,7 @@ public class UserSteps {
         Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_REGISTRATION);
     }
     @Step
-    public void registrate(UserRegister user) {
+    public void registrate(User user) {
         homePage.open();
         headerPage.clickAccountbutton();
         headerPage.clickRegisterOption();

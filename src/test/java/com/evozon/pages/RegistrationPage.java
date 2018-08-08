@@ -1,6 +1,6 @@
 package com.evozon.pages;
 
-import com.evozon.entities.UserRegister;
+import com.evozon.entities.User;
 import com.evozon.utils.Constants;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -50,12 +50,12 @@ public class RegistrationPage extends PageObject {
         fillPassword(password);
         fillPasswordConfirmation(confirmation);
     }
-    public void fillFields(UserRegister user) {
+    public void fillFields(User user) {
         fillFirstname(user.getFirstname());
         fillLastname(user.getLastname());
         fillEmailaddress(user.getEmail());
         fillPassword(user.getPassword());
-        fillPasswordConfirmation(user.getConfirmation());
+        fillPasswordConfirmation(user.getPassword());
     }
 
     /*Clicks*/

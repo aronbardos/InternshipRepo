@@ -1,6 +1,7 @@
 package com.evozon.tests;
 
-import com.evozon.entities.UserRegister;
+import com.evozon.entities.User;
+import com.evozon.factories.UserFactory;
 import com.evozon.steps.UserSteps;
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Steps;
@@ -22,9 +23,12 @@ public class RegistrationTest extends BaseTest {
     String confirmation;
 
     @Test
-    public void createUser() {
-        UserRegister userRegister = new UserRegister();
+    public void createSpecificUser() {
         userSteps.registrate(firstname, lastname, email, password, confirmation);
-        userSteps.registrate(userRegister);
+    }
+    @Test
+    public void createRandomUser() {
+        User user = UserFactory.generateUser();
+        userSteps.registrate(user);
     }
 }
