@@ -122,7 +122,6 @@ public class CheckoutPage extends PageObject {
     public void fillPhoneField() {
         phone.sendKeys(Constants.VALID_PHONE_NUMBER);
     }
-
     public void fillShippingMethodForm() {
         shippingMethodFixedRadioButton.click();
     }

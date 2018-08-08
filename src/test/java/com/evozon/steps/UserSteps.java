@@ -19,6 +19,7 @@ public class UserSteps {
     private CheckoutPage     checkoutPage;
     private LoginPage        loginPage;
 
+    /*Steps*/
     @Step
     public void changeLanguage(final String changeToLanguage) {
         homePage.open();
@@ -33,7 +34,8 @@ public class UserSteps {
         headerPage.clickRegisterOption();
         registrationPage.fillFields(firstname, lastname, email, password, confirmation);
         registrationPage.clickRegisterButton();
-        Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_REGISTRATION);
+        //Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_REGISTRATION);
+        Assert.assertTrue(registrationPage.isRegistrationSuccessful());
     }
     @Step
     public void registrate(User user) {
@@ -63,6 +65,7 @@ public class UserSteps {
     }
     @Step
     public void placeOrder() {
+        //TODO: Remove hardcoded parts
         addProductToCart();
         cartPage.proceedToCheckout();
         checkoutPage.fillBillingInformationForm();
@@ -78,8 +81,9 @@ public class UserSteps {
         Assert.assertEquals(checkoutPage.getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_ORDER);
     }
 
+    /*StepGroups*/
     @StepGroup
-    public void group(){
+    public void orderItem(){
         addProductToCart();
         placeOrder();
     }

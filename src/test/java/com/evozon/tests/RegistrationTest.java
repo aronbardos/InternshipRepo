@@ -22,6 +22,7 @@ public class RegistrationTest extends BaseTest {
     String password;
     String confirmation;
 
+    /*Tests*/
     @Test
     public void createSpecificUser() {
         userSteps.registrate(firstname, lastname, email, password, confirmation);
@@ -31,4 +32,6 @@ public class RegistrationTest extends BaseTest {
         User user = UserFactory.generateUser();
         userSteps.registrate(user);
     }
+
+    //TODO: check registration with invalid credentials
 }

@@ -50,7 +50,7 @@ public class HeaderPage extends PageObject {
         return newProductsTitle.getText().contains(languageSample);
     }
 
-    /*Selects*/
+    /*Selections*/
     public void selectLanguageOption(final String option) {
         Select languageSelection = new Select(languageDropdown);
         languageSelection.selectByVisibleText(option);

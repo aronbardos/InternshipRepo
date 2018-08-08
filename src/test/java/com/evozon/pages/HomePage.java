@@ -21,6 +21,7 @@ public class HomePage extends PageObject {
     @FindBy(css = "[title~=Chelsea]")
     private WebElement newProduct;
 
+    /*Selections*/
     public void selectNewProduct() {
         newProduct.click();
     }

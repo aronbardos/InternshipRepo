@@ -25,7 +25,12 @@ public class RegistrationPage extends PageObject {
     @FindBy(css = "button[title=Register]")
     private WebElement registerButton;
 
-    /*Inputs*/
+    /*Verifications*/
+    public boolean isRegistrationSuccessful() {
+        return getDriver().getCurrentUrl().equals(Constants.URL_SUCCESSFUL_REGISTRATION);
+    }
+
+    /*Fills*/
     public void fillFirstname(String firstname) {
         firstnameField.sendKeys(firstname);
     }
@@ -41,8 +46,6 @@ public class RegistrationPage extends PageObject {
     public void fillPasswordConfirmation(String confirmation) {
         passwordConfirmationField.sendKeys(confirmation);
     }
-
-    /*Fills*/
     public void fillFields(String firstname, String lastname, String email, String password, String confirmation) {
         fillFirstname(firstname);
         fillLastname(lastname);

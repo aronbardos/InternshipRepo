@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781003c0-8fb0-446d-b045-17bcb680bb24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/WishlistTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evozon/suites/OtherFeaturesSuits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/CheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/pages/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/pages/WishlistPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/steps/UserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/steps/UserSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/CheckoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/ShoppingFlowsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/ShoppingFlowsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/evozon/tests/WishlistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/evozon/tests/WishlistTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +39,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="csv" value="5" />
-          <entry key="java" value="46" />
+          <entry key="java" value="96" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -39,7 +47,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="CSV" value="5" />
-          <entry key="JAVA" value="46" />
+          <entry key="JAVA" value="96" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -47,14 +55,14 @@
         <counts>
           <entry key="csv" value="92" />
           <entry key="dummy" value="12" />
-          <entry key="java" value="1506" />
+          <entry key="java" value="2890" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSV" value="92" />
-          <entry key="JAVA" value="1506" />
+          <entry key="JAVA" value="2890" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="XML" value="1" />
         </counts>
@@ -64,48 +72,44 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/CheckoutPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="35" column="75" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
+            <state relative-caret-position="508">
+              <caret line="129" column="5" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
               <folding>
-                <element signature="method#isTextUpdatedAfterLanguageChange#0;class#HeaderPage#0" />
+                <element signature="method#waitForBillingFormToBeLoaded#0;class#CheckoutPage#0" />
+                <element signature="method#waitForPaymentInformationFormToBeLoaded#0;class#CheckoutPage#0" />
+                <element signature="method#waitForOrderProcessing#0;class#CheckoutPage#0" />
+                <element signature="method#fillBillingInformationForm#0;class#CheckoutPage#0" />
+                <element signature="method#fillCountryField#0;class#CheckoutPage#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/steps/UserSteps.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/CheckoutTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-              <folding>
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/steps/UserSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <state relative-caret-position="490">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+              <folding>
+                <element signature="method#changeLanguage#0;class#UserSteps#0" />
+                <element signature="method#registrate#0;class#UserSteps#0" />
+                <element signature="method#registrate#1;class#UserSteps#0" />
+                <element signature="method#login#0;class#UserSteps#0" />
+                <element signature="method#addProductToCart#0;class#UserSteps#0" />
+                <element signature="method#placeOrder#0;class#UserSteps#0" />
+                <element signature="method#orderItem#0;class#UserSteps#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,19 +135,26 @@
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/suites/CriticalFeaturesSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/suites/FlowsSuite.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testdata/Test00_Register.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/RegistrationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testdata/Test01_Login.csv" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/CartPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/RegistrationPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/CheckoutPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/HomePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/ProductPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/WishlistPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/CartTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/CheckoutTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/LoginTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/RegistrationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/WishlistTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/ShoppingFlowsTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/RegistrationPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/CartPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/SearchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/evozon/suites/OtherFeaturesSuits.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/evozon/steps/UserSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java" />
       </list>
     </option>
   </component>
@@ -158,7 +169,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -322,7 +333,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533740666299" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533742644608" />
     <property name="last_opened_file_path" value="D:/Mihai/TestSerenityProjectMihai/TestSerenityProject" />
   </component>
   <component name="RunDashboard">
@@ -337,7 +348,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LanguageTest">
+  <component name="RunManager" selected="JUnit.RegistrationTest">
     <configuration name="CartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyNewSerenityProject" />
       <extension name="coverage">
@@ -417,10 +428,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegistrationTest" />
         <item itemvalue="JUnit.LanguageTest" />
         <item itemvalue="JUnit.CartTest" />
         <item itemvalue="JUnit.LoginTest" />
-        <item itemvalue="JUnit.RegistrationTest" />
         <item itemvalue="JUnit.ShoppingFlowsTest" />
       </list>
     </recent_temporary>
@@ -439,12 +450,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest - 2018.08.08 at 16h 55m 55s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTest - 2018.08.08 at 16h 56m 05s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginTest - 2018.08.08 at 16h 56m 22s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
@@ -469,6 +474,12 @@
     <history-entry file="LanguageTest - 2018.08.08 at 18h 03m 43s.xml">
       <configuration name="LanguageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LanguageTest - 2018.08.08 at 18h 11m 54s.xml">
+      <configuration name="LanguageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegistrationTest - 2018.08.08 at 18h 12m 32s.xml">
+      <configuration name="RegistrationTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -484,7 +495,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.32952183" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32640332" />
@@ -544,27 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/suites/FlowsSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/testdata/Test01_Login.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -579,22 +569,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/LoginTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="352">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+          <folding>
+            <element signature="method#isTextUpdatedAfterLanguageChange#0;class#HeaderPage#0" />
+            <element signature="method#selectLanguageOption#0;class#HeaderPage#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/ProductPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="method#selectOptions#0;class#ProductPage#0" />
+            <element signature="method#clickAddToCart#0;class#ProductPage#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/WishlistPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/suites/FlowsSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/suites/CriticalFeaturesSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/CartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding>
+            <element signature="method#isProductSuccessfullyAdded#0;class#CartPage#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/ShoppingFlowsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="method#placeASimpleOrder#0;class#ShoppingFlowsTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/WishlistTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/RegistrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/SearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/suites/OtherFeaturesSuits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/CartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/LoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/RegistrationPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="276">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
             <element signature="method#fillFields#0;class#RegistrationPage#0" />
             <element signature="method#fillFields#1;class#RegistrationPage#0" />
@@ -602,129 +748,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/WishlistPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/WishlistTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/ShoppingFlowsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/CheckoutTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/suites/CriticalFeaturesSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/RegistrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/CheckoutPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1314">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="508">
+          <caret line="129" column="5" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
           <folding>
+            <element signature="method#waitForBillingFormToBeLoaded#0;class#CheckoutPage#0" />
+            <element signature="method#waitForPaymentInformationFormToBeLoaded#0;class#CheckoutPage#0" />
+            <element signature="method#waitForOrderProcessing#0;class#CheckoutPage#0" />
             <element signature="method#fillBillingInformationForm#0;class#CheckoutPage#0" />
             <element signature="method#fillCountryField#0;class#CheckoutPage#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/CartPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/CheckoutTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="29" column="88" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/pages/HeaderPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="35" column="75" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
-          <folding>
-            <element signature="method#isTextUpdatedAfterLanguageChange#0;class#HeaderPage#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/CartTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/steps/UserSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/tests/LanguageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        <state relative-caret-position="490">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
+            <element signature="method#changeLanguage#0;class#UserSteps#0" />
+            <element signature="method#registrate#0;class#UserSteps#0" />
+            <element signature="method#registrate#1;class#UserSteps#0" />
+            <element signature="method#login#0;class#UserSteps#0" />
+            <element signature="method#addProductToCart#0;class#UserSteps#0" />
+            <element signature="method#placeOrder#0;class#UserSteps#0" />
+            <element signature="method#orderItem#0;class#UserSteps#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/evozon/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
         </state>
       </provider>
     </entry>

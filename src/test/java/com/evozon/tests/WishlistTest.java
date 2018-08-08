@@ -9,4 +9,10 @@ import org.junit.runner.RunWith;
 public class WishlistTest extends BaseTest {
     @Steps
     public UserSteps userSteps;
+
+    /*Tests*/
+    //TODO: Add item
+    //TODO: Check displayed info
+    //TODO: Modify the quantity of an item
+    //TODO: Remove item
 }

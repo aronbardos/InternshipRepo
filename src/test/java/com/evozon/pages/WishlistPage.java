@@ -6,5 +6,5 @@ import net.thucydides.core.pages.PageObject;
 
 @DefaultUrl(Constants.URL_REGISTER)
 public class WishlistPage extends PageObject {
-
+    //TODO: get elements and write methods
 }

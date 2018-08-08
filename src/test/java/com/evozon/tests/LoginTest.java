@@ -17,8 +17,12 @@ public class LoginTest extends BaseTest {
     String email;
     String password;
 
+    /*Tests*/
     @Test
     public void loginWithValidCredentials() {
         userSteps.login(email, password);
     }
+
+    //TODO: login with invalid credentials
+    //TODO: login with random credentials
 }

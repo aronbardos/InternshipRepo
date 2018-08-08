@@ -12,6 +12,7 @@ public class LanguageTest extends BaseTest {
     @Steps
     public UserSteps userSteps;
 
+    /*Tests*/
     @Test
     public void changeLanguageToEnglish() {
         userSteps.changeLanguage(Constants.LANGUAGE_ENG);
@@ -24,4 +25,6 @@ public class LanguageTest extends BaseTest {
     public void changeLanguageToGerman() {
         userSteps.changeLanguage(Constants.LANGUAGE_GER);
     }
+
+    //TODO: Change language on multiple pages
 }

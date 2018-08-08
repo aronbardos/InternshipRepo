@@ -12,6 +12,7 @@ public class ShoppingFlowsTest extends BaseTest {
     @Steps
     public UserSteps userSteps;
 
+    /*Tests*/
     @Test
     public void addProductToCart() {
         userSteps.addProductToCart();
@@ -20,10 +21,12 @@ public class ShoppingFlowsTest extends BaseTest {
     public void placeOrder() {
         userSteps.placeOrder();
     }
-
-    @StepGroup
+    @Test
     public void placeASimpleOrder() {
         addProductToCart();
         placeOrder();
     }
+
+    //TODO: create more happy flows
+    //TODO: create #sadFlows
 }

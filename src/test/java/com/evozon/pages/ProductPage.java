@@ -15,6 +15,7 @@ public class ProductPage extends PageObject {
     @FindBy(css = ".add-to-cart-buttons [title='Add to Cart']")
     private WebElement addToCartButton;
 
+    /*Selections*/
     public void selectColor() {
         selectColorButton.click();
     }
@@ -25,6 +26,8 @@ public class ProductPage extends PageObject {
         selectColor();
         selectSize();
     }
+
+    /*Clicks*/
     public void clickAddToCart() {
         addToCartButton.click();
         Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_CART);

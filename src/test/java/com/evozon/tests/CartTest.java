@@ -11,9 +11,14 @@ public class CartTest extends BaseTest {
     @Steps
     public UserSteps userSteps;
 
+    /*Tests*/
     @Test
     public void addProductToCart() {
         userSteps.addProductToCart();
     }
+
+    //TODO: Add multiple products
+    //TODO: Modify the quantity of an item
+    //TODO: Check displayed cart info
 }
 
