@@ -22,7 +22,7 @@ public class RegistrationPage extends PageObject {
     private WebElement passwordConfirmationField;
 
     /*Buttons*/
-    @FindBy(css = "#form-validate > div.buttons-set > button")
+    @FindBy(css = "button[title=Register]")
     private WebElement registerButton;
 
     /*Inputs*/

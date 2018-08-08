@@ -13,12 +13,24 @@ public class CartPage extends PageObject {
     @FindBy(id = "onepage-guest-register-button")
     private WebElement continueButton;
 
+    /*Titles*/
+    @FindBy(css = "ul[class=messages]")
+    private WebElement cartUpdateMessage;
+
+    /*Clicks*/
     public void clickProceedToCheckoutButton() {
         proceedToCheckoutButton.click();
     }
     public void clickContinue() {
         continueButton.click();
     }
+
+    /*Verifications*/
+    public boolean isProductSuccessfullyAdded() {
+        return cartUpdateMessage.getText().contains("was added to your shopping cart.");
+    }
+
+    /*Complex methods*/
     public void proceedToCheckout() {
         clickProceedToCheckoutButton();
         clickContinue();

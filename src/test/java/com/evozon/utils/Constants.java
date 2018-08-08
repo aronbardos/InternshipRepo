@@ -11,9 +11,9 @@ public class Constants {
     public static final String URL_SUCCESSFUL_REGISTRATION = "http://qa1.dev.evozon.com/customer/account/index/";
 
     /*Language options*/
-    public static final String LANGUAGE_ENGLISH    = "English";
-    public static final String LANGUAGE_FRENCH     = "French";
-    public static final String LANGUAGE_GERMAN     = "German";
+    public static final String LANGUAGE_ENG = "English";
+    public static final String LANGUAGE_FRA = "French";
+    public static final String LANGUAGE_GER = "German";
 
     /*User info*/
     public static final String VALID_FIRSTNAME     = "firstname";

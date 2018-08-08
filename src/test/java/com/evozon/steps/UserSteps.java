@@ -20,10 +20,11 @@ public class UserSteps {
     private LoginPage        loginPage;
 
     @Step
-    public void changeLanguage() {
+    public void changeLanguage(final String changeToLanguage) {
         homePage.open();
         headerPage.clickLanguageDropdown();
-        headerPage.selectLanguageOption(Constants.LANGUAGE_ENGLISH);
+        headerPage.selectLanguageOption(changeToLanguage);
+        Assert.assertTrue(headerPage.isTextUpdatedAfterLanguageChange(changeToLanguage));
     }
     @Step
     public void registrate(String firstname, String lastname, String email, String password, String confirmation) {
@@ -58,6 +59,7 @@ public class UserSteps {
         homePage.selectNewProduct();
         productPage.selectOptions();
         productPage.clickAddToCart();
+        Assert.assertTrue(cartPage.isProductSuccessfullyAdded());
     }
     @Step
     public void placeOrder() {

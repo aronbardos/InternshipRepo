@@ -16,7 +16,6 @@ public class ShoppingFlowsTest extends BaseTest {
     public void addProductToCart() {
         userSteps.addProductToCart();
     }
-
     @Test
     public void placeOrder() {
         userSteps.placeOrder();

@@ -1,6 +1,7 @@
 package com.evozon.tests;
 
 import com.evozon.steps.UserSteps;
+import com.evozon.utils.Constants;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
@@ -12,7 +13,15 @@ public class LanguageTest extends BaseTest {
     public UserSteps userSteps;
 
     @Test
-    public void changeLanguage() {
-        userSteps.changeLanguage();
+    public void changeLanguageToEnglish() {
+        userSteps.changeLanguage(Constants.LANGUAGE_ENG);
+    }
+    @Test
+    public void changeLanguageToFrench() {
+        userSteps.changeLanguage(Constants.LANGUAGE_FRA);
+    }
+    @Test
+    public void changeLanguageToGerman() {
+        userSteps.changeLanguage(Constants.LANGUAGE_GER);
     }
 }
