@@ -20,6 +20,12 @@ public class HomePage extends PageObject {
     private WebElement newProduct2;
     @FindBy(css = "h3[class='product-name']")
     private List<WebElementFacade> newProductsList;
+    @FindBy(css = "img[alt~='Physical']")
+    private WebElement homeDecorLink;
+    @FindBy(css = "img[alt~='Private']")
+    private WebElement privateSalesLink;
+    @FindBy(css = "img[alt~='Travel']")
+    private WebElement travelGearLink;
 
     /*Selections*/
     public void selectNewProduct1() {
@@ -35,5 +41,16 @@ public class HomePage extends PageObject {
                 return;
             }
         }
+    }
+
+    /*Clicks*/
+    public void clickHomeDecorLink() {
+        homeDecorLink.click();
+    }
+    public void clickPrivateSalesLink() {
+        privateSalesLink.click();
+    }
+    public void clickTravelGearLink() {
+        travelGearLink.click();
     }
 }

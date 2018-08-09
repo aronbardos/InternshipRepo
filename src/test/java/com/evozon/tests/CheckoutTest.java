@@ -17,6 +17,7 @@ public class CheckoutTest extends BaseTest {
         userSteps.placeOrder();
     }
 
+    //TODO: Data driven checkout form filling
     //TODO: Check displayed info
     //TODO: Input field validation
 }

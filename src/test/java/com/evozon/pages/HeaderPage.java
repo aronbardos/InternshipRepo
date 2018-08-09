@@ -28,9 +28,13 @@ public class HeaderPage extends PageObject {
     @FindBy(css = "a[title='Wishlist']")
     private WebElement wishlistLink;
 
-    /*Texts*/
+    /*Titles*/
     @FindBy(css = "h2")
     private WebElement newProductsTitle;
+
+    /*Messages*/
+    @FindBy(css = "p[class='welcome-msg']")
+    private WebElement welcomeMessage;
 
     /*Pictures*/
     @FindBy(css = ".large")
@@ -56,6 +60,9 @@ public class HeaderPage extends PageObject {
         }
 
         return newProductsTitle.getText().contains(languageSample);
+    }
+    public boolean isWelcomeMessageCorrectlyDisplayed(String firstname) {
+        return welcomeMessage.getText().contains(firstname);
     }
 
     /*Selections*/

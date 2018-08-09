@@ -6,8 +6,10 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        RegistrationTest.class,
+        DataDrivenRegistrationTest.class,
+        DataDrivenLoginTest.class,
         LoginTest.class,
+        RegistrationTest.class,
         CartTest.class,
         CheckoutTest.class,
         SearchTest.class

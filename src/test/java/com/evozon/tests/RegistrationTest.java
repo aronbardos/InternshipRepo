@@ -3,35 +3,27 @@ package com.evozon.tests;
 import com.evozon.entities.User;
 import com.evozon.factories.UserFactory;
 import com.evozon.steps.UserSteps;
-import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
+import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.junit.annotations.UseTestDataFrom;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith(SerenityParameterizedRunner.class)
-@UseTestDataFrom(value = "testdata/Test00_Register.csv")
+@RunWith(SerenityRunner.class)
 public class RegistrationTest extends BaseTest {
     @Steps
     public UserSteps userSteps;
 
-    /*CSV fields*/
-    String firstname;
-    String lastname;
-    String email;
-    String password;
-    String confirmation;
-
     /*Tests*/
     @Test
-    public void registrateSpecificUser() {
-        userSteps.registrate(firstname, lastname, email, password, confirmation);
+    public void registrateRandomUser() {
+        userSteps.registrateRandomUser();
     }
     @Test
-    public void registrateRandomUser() {
+    public void registrateSpecificUser() {
+        //override the fields you want to specify
         User user = UserFactory.generateUser();
-        userSteps.registrate(user);
+        userSteps.registrateSpecificUser(user);
     }
 
-    //TODO: check registration with invalid credentials
+    //TODO: Check registration with invalid credentials
 }

@@ -1,6 +1,8 @@
 package com.evozon.steps;
 
+import com.evozon.entities.CheckoutUser;
 import com.evozon.entities.User;
+import com.evozon.factories.UserFactory;
 import com.evozon.pages.*;
 import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Step;
@@ -10,6 +12,7 @@ public class UserSteps {
     /*Pages*/
     private CartPage         cartPage;
     private CatalogPage      catalogPage;
+    private CategoryPage     categoryPage;
     private CheckoutPage     checkoutPage;
     private HeaderPage       headerPage;
     private HomePage         homePage;
@@ -39,13 +42,21 @@ public class UserSteps {
         Assert.assertTrue(registrationPage.isRegistrationSuccessful());
     }
     @Step
-    public void registrate(User user) {
+    public void registrateRandomUser() {
+        User user = UserFactory.generateUser();
         homePage.open();
         headerPage.clickAccountbutton();
         headerPage.clickRegisterOption();
         registrationPage.fillFields(user);
         registrationPage.clickRegisterButton();
         Assert.assertTrue(registrationPage.isRegistrationSuccessful());
+    }
+    @Step
+    public void registrateSpecificUser(User user) {
+        homePage.open();
+        headerPage.clickAccountbutton();
+        headerPage.clickRegisterOption();
+        registrationPage.fillFields(user);
     }
 
     /*Login*/
@@ -88,7 +99,7 @@ public class UserSteps {
 
     /*Cart*/
     @Step
-    public void addProductToCart() {
+    public void addRandomNewProductToCart() {
         homePage.open();
         homePage.selectNewProduct2();
         productPage.selectOptions();
@@ -100,9 +111,24 @@ public class UserSteps {
     @Step
     public void placeOrder() {
         //TODO: Remove hardcoded parts
-        addProductToCart();
+        addRandomNewProductToCart();
         cartPage.proceedToCheckout();
         checkoutPage.fillBillingInformationForm();
+        checkoutPage.clickContinueButton();
+        checkoutPage.waitForBillingFormToBeLoaded();
+        checkoutPage.fillShippingMethodForm();
+        checkoutPage.clickShippingMethodContinueButton();
+        checkoutPage.fillPaymentInformationForm();
+        checkoutPage.clickPaymentMethodContinueButton();
+        checkoutPage.waitForPaymentInformationFormToBeLoaded();
+        checkoutPage.clickPlaceOrderButton();
+        checkoutPage.waitForOrderProcessing();
+        Assert.assertTrue(checkoutPage.isOrderSuccessful());
+    }
+    public void placeOrder(CheckoutUser checkoutUser) {
+        addRandomNewProductToCart();
+        cartPage.proceedToCheckout();
+        checkoutPage.fillBillingInformationForm(checkoutUser);
         checkoutPage.clickContinueButton();
         checkoutPage.waitForBillingFormToBeLoaded();
         checkoutPage.fillShippingMethodForm();
@@ -156,5 +182,43 @@ public class UserSteps {
         loginWithValidCredentials(Constants.VALID_EMAIL_ADDRESS, Constants.VALID_PASSWORD);
         headerPage.clickWishlistOption();
         Assert.assertTrue(wishlistPage.isPageOpened());
+    }
+
+    /*Compare*/
+    @Step
+    public void addProductToComparisonList(String productName) {
+        homePage.open();
+        homePage.selectNewProduct(productName);
+        productPage.clickAddToCompare();
+        Assert.assertTrue(productPage.isAdditionToComparisonListSuccessful());
+    }
+
+    /*Messages*/
+    public void isWelcomeMessageDisplayed() {
+        //TODO: Remove hardcoded parts later
+        loginWithValidCredentials(Constants.VALID_EMAIL_ADDRESS, Constants.VALID_PASSWORD);
+        Assert.assertTrue(headerPage.isWelcomeMessageCorrectlyDisplayed(Constants.VALID_FIRSTNAME));
+    }
+
+    /*Links*/
+    public void verifyHomepageHomeDecorCategoryLink() {
+        homePage.open();
+        homePage.clickHomeDecorLink();
+        Assert.assertTrue(categoryPage.verifyHomeDecorLinkFunctionality());
+    }
+    public void verifyHomepagePrivateSalesCategoryLink() {
+        homePage.open();
+        homePage.clickPrivateSalesLink();
+        Assert.assertTrue(categoryPage.verifyPrivateSalesLinkFunctionality());
+    }
+    public void verifyHomepageTravelGearCategoryLink() {
+        homePage.open();
+        homePage.clickTravelGearLink();
+        Assert.assertTrue(categoryPage.verifyTravelGearLinkFunctionality());
+    }
+    public void verifyHomePageCategoryLinks() {
+        verifyHomepageHomeDecorCategoryLink();
+        verifyHomepagePrivateSalesCategoryLink();
+        verifyHomepageTravelGearCategoryLink();
     }
 }

@@ -19,6 +19,17 @@ public class ProductPage extends PageObject {
     /*Links*/
     @FindBy(css = "a[class='link-wishlist']")
     private WebElement addToWishlistLink;
+    @FindBy(css = "a[class='link-compare']")
+    private WebElement addToCompareLink;
+
+    /*Messages*/
+    @FindBy(id = "messages_product_view")
+    private WebElement addedToComparisonListMessage;
+
+    /*Verifications*/
+    public boolean isAdditionToComparisonListSuccessful() {
+        return addedToComparisonListMessage.isDisplayed();
+    }
 
     /*Selections*/
     public void selectColor() {
@@ -39,5 +50,8 @@ public class ProductPage extends PageObject {
     }
     public void clickAddToWishlist() {
         addToWishlistLink.click();
+    }
+    public void clickAddToCompare() {
+        addToCompareLink.click();
     }
 }

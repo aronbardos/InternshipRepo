@@ -1,5 +1,6 @@
 package com.evozon.pages;
 
+import com.evozon.entities.CheckoutUser;
 import com.evozon.utils.Constants;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -99,6 +100,25 @@ public class CheckoutPage extends PageObject {
         fillRegionField();
         fillPhoneField();
     }
+    public void fillBillingInformationForm(CheckoutUser checkoutUser) {
+        //TODO: Get rid of these two hardcoded lines
+        fillCountryField();
+        fillRegionField();
+
+        //TODO: Implement these instead
+        //fillCountryField(checkoutUser.getCountry());
+        //fillRegionField(checkoutUser.getState());
+
+        fillFirstNameField(checkoutUser.getFirstname());
+        fillLastNameField(checkoutUser.getLastname());
+        fillEmailAddressField(checkoutUser.getEmail());
+        fillAddressField(checkoutUser.getAddress());
+        fillCityField(checkoutUser.getCity());
+        fillPostalCodeField(checkoutUser.getPostalcode());
+        fillPhoneField(checkoutUser.getPhone());
+    }
+
+    /*Hardcoded billing form filling*/
     public void fillFirstNameField() {
         firstname.sendKeys(Constants.VALID_FIRSTNAME);
     }
@@ -119,7 +139,6 @@ public class CheckoutPage extends PageObject {
     }
     public void fillCountryField() {
         country.selectByVisibleText(Constants.VALID_COUNTRY);
-        country.sendKeys();
     }
     public void fillRegionField() {
         region.selectByVisibleText(Constants.VALID_REGION);
@@ -127,6 +146,37 @@ public class CheckoutPage extends PageObject {
     public void fillPhoneField() {
         phone.sendKeys(Constants.VALID_PHONE_NUMBER);
     }
+
+    /*Parameterized billing form filling*/
+    public void fillFirstNameField(String inputFirstname) {
+        firstname.sendKeys(inputFirstname);
+    }
+    public void fillLastNameField(String inputLastname) {
+        lastname.sendKeys(inputLastname);
+    }
+    public void fillEmailAddressField(String inputEmail) {
+        emailAddress.sendKeys(inputEmail);
+    }
+    public void fillAddressField(String inputAddress) {
+        address.sendKeys(inputAddress);
+    }
+    public void fillCityField(String inputCity) {
+        city.sendKeys(inputCity);
+    }
+    public void fillPostalCodeField(String inputPostalcode) {
+        postalcode.sendKeys(inputPostalcode);
+    }
+    public void fillPhoneField(String inputPhone) {
+        phone.sendKeys(inputPhone);
+    }
+    public void fillCountryField(int inputCountry) {
+        country.selectByIndex(inputCountry);
+    }
+    public void fillRegionField(int inputRegion) {
+        region.selectByIndex(inputRegion);
+    }
+
+    /*Other forms*/
     public void fillShippingMethodForm() {
         shippingMethodFixedRadioButton.click();
     }

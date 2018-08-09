@@ -7,7 +7,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         LanguageTest.class,
-        WishlistTest.class
+        WishlistTest.class,
+        CompareTest.class
 })
 public class OtherFeaturesSuits {
 }
