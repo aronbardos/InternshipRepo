@@ -11,6 +11,8 @@ public class HeaderPage extends PageObject {
     /*Buttons*/
     @FindBy(css = ".skip-link.skip-account")
     private WebElement accountDropdownButton;
+    @FindBy(css = "button[title='Search']")
+    private WebElement searchbarButton;
 
     /*Dropdowns*/
     @FindBy(css = "#header-account")
@@ -32,8 +34,12 @@ public class HeaderPage extends PageObject {
     @FindBy(css = ".large")
     private WebElement logoPicture;
 
+    /*Input fields*/
+    @FindBy(id = "search")
+    private WebElement searchbar;
+
     /*Verifications*/
-    public boolean isTextUpdatedAfterLanguageChange(final String language) {
+    public boolean isLanguageChangeSuccessful(final String language) {
         String languageSample = new String();
         switch(language) {
             case Constants.LANGUAGE_ENG:
@@ -56,6 +62,11 @@ public class HeaderPage extends PageObject {
         languageSelection.selectByVisibleText(option);
     }
 
+    /*Fills*/
+    public void fillSearchbar(String query) {
+        searchbar.sendKeys(query);
+    }
+
     /*Clicks*/
     public void clickLanguageDropdown() {
         languageDropdown.click();
@@ -68,5 +79,11 @@ public class HeaderPage extends PageObject {
     }
     public void clickLoginOption() {
         loginLink.click();
+    }
+    public void clickSearchbar() {
+        searchbar.click();
+    }
+    public void clickSearchbarButton() {
+        searchbarButton.click();
     }
 }

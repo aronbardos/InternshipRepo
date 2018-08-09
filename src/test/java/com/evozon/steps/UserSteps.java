@@ -7,8 +7,6 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.StepGroup;
 import org.junit.Assert;
 
-import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
-
 public class UserSteps {
     /*Pages*/
     private HomePage         homePage;
@@ -18,6 +16,7 @@ public class UserSteps {
     private CartPage         cartPage;
     private CheckoutPage     checkoutPage;
     private LoginPage        loginPage;
+    private CatalogPage      catalogPage;
 
     /*Steps*/
     @Step
@@ -25,8 +24,10 @@ public class UserSteps {
         homePage.open();
         headerPage.clickLanguageDropdown();
         headerPage.selectLanguageOption(changeToLanguage);
-        Assert.assertTrue(headerPage.isTextUpdatedAfterLanguageChange(changeToLanguage));
+        Assert.assertTrue(headerPage.isLanguageChangeSuccessful(changeToLanguage));
     }
+
+    /*Registration*/
     @Step
     public void registrate(String firstname, String lastname, String email, String password, String confirmation) {
         homePage.open();
@@ -34,7 +35,6 @@ public class UserSteps {
         headerPage.clickRegisterOption();
         registrationPage.fillFields(firstname, lastname, email, password, confirmation);
         registrationPage.clickRegisterButton();
-        //Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_REGISTRATION);
         Assert.assertTrue(registrationPage.isRegistrationSuccessful());
     }
     @Step
@@ -44,17 +44,48 @@ public class UserSteps {
         headerPage.clickRegisterOption();
         registrationPage.fillFields(user);
         registrationPage.clickRegisterButton();
-        Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_REGISTRATION);
+        Assert.assertTrue(registrationPage.isRegistrationSuccessful());
     }
+
+    /*Login*/
     @Step
-    public void login(String email, String password) {
+    public void loginWithValidCredentials(String email, String password) {
         homePage.open();
         headerPage.clickAccountbutton();
         headerPage.clickLoginOption();
         loginPage.fillFields(email, password);
         loginPage.clickLoginButton();
-        Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_MY_ACCOUNT);
+        Assert.assertTrue(loginPage.isLoginSuccessful());
     }
+    @Step
+    public void loginWithInvalidCredentials(String email, String password) {
+        homePage.open();
+        headerPage.clickAccountbutton();
+        headerPage.clickLoginOption();
+        loginPage.fillFields(email, password);
+        loginPage.clickLoginButton();
+        Assert.assertFalse(loginPage.isLoginSuccessful());
+    }
+    @Step
+    public void loginWithOnlyEmailAddressFieldFilled(String email) {
+        homePage.open();
+        headerPage.clickAccountbutton();
+        headerPage.clickLoginOption();
+        loginPage.fillEmailAddressField(email);
+        loginPage.clickLoginButton();
+        Assert.assertFalse(loginPage.isLoginSuccessful());
+    }
+    @Step
+    public void loginWithOnlyPasswordFieldFilled(String password) {
+        homePage.open();
+        headerPage.clickAccountbutton();
+        headerPage.clickLoginOption();
+        loginPage.fillPasswordField(password);
+        loginPage.clickLoginButton();
+        Assert.assertFalse(loginPage.isLoginSuccessful());
+    }
+
+    /*Cart*/
     @Step
     public void addProductToCart() {
         homePage.open();
@@ -63,6 +94,8 @@ public class UserSteps {
         productPage.clickAddToCart();
         Assert.assertTrue(cartPage.isProductSuccessfullyAdded());
     }
+
+    /*Checkout*/
     @Step
     public void placeOrder() {
         //TODO: Remove hardcoded parts
@@ -78,7 +111,23 @@ public class UserSteps {
         checkoutPage.waitForPaymentInformationFormToBeLoaded();
         checkoutPage.clickPlaceOrderButton();
         checkoutPage.waitForOrderProcessing();
-        Assert.assertEquals(checkoutPage.getDriver().getCurrentUrl(), Constants.URL_SUCCESSFUL_ORDER);
+        Assert.assertTrue(checkoutPage.isOrderSuccessful());
+    }
+
+    /*Search*/
+    public void searchByName(String query) {
+        homePage.open();
+        headerPage.clickSearchbar();
+        headerPage.fillSearchbar(query);
+        headerPage.clickSearchbarButton();
+        Assert.assertTrue(catalogPage.isProductFound(query));
+    }
+    public void searchResultContainsOnlyRelevantProducts(String query) {
+        homePage.open();
+        headerPage.clickSearchbar();
+        headerPage.fillSearchbar(query);
+        headerPage.clickSearchbarButton();
+        Assert.assertTrue(catalogPage.isOnlyRelevantProductsFound(query));
     }
 
     /*StepGroups*/

@@ -18,6 +18,11 @@ public class LoginPage extends PageObject {
     @FindBy(css = "button[title='Login']")
     private WebElement loginButton;
 
+    /*Verifications*/
+    public boolean isLoginSuccessful() {
+        return getDriver().getCurrentUrl().equals(Constants.URL_MY_ACCOUNT);
+    }
+
     /*Fills*/
     public void fillEmailAddressField(String email) {
         emailAddressField.sendKeys(email);

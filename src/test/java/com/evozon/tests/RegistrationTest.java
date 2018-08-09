@@ -24,11 +24,11 @@ public class RegistrationTest extends BaseTest {
 
     /*Tests*/
     @Test
-    public void createSpecificUser() {
+    public void registrateSpecificUser() {
         userSteps.registrate(firstname, lastname, email, password, confirmation);
     }
     @Test
-    public void createRandomUser() {
+    public void registrateRandomUser() {
         User user = UserFactory.generateUser();
         userSteps.registrate(user);
     }

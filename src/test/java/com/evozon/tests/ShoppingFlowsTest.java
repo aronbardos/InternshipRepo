@@ -14,17 +14,8 @@ public class ShoppingFlowsTest extends BaseTest {
 
     /*Tests*/
     @Test
-    public void addProductToCart() {
-        userSteps.addProductToCart();
-    }
-    @Test
-    public void placeOrder() {
-        userSteps.placeOrder();
-    }
-    @Test
     public void placeASimpleOrder() {
-        addProductToCart();
-        placeOrder();
+        userSteps.orderItem();
     }
 
     //TODO: create more happy flows

@@ -57,6 +57,11 @@ public class CheckoutPage extends PageObject {
     @FindBy(id = "checkout-step-review")
     private WebElement orderReviewPageTitle;
 
+    /*Verifications*/
+    public boolean isOrderSuccessful() {
+        return getDriver().getCurrentUrl().equals(Constants.URL_SUCCESSFUL_ORDER);
+    }
+
     /*Waits*/
     public void waitForBillingFormToBeLoaded() {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(billingMethodFormWaitTitle).waitUntilNotVisible();

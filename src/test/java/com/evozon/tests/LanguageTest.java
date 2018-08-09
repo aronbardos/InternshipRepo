@@ -26,5 +26,5 @@ public class LanguageTest extends BaseTest {
         userSteps.changeLanguage(Constants.LANGUAGE_GER);
     }
 
-    //TODO: Change language on multiple pages
+    //TODO: Verify on multiple pages
 }

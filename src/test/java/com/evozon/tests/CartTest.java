@@ -17,8 +17,8 @@ public class CartTest extends BaseTest {
         userSteps.addProductToCart();
     }
 
-    //TODO: Add multiple products
     //TODO: Modify the quantity of an item
+    //TODO: Add multiple products
     //TODO: Check displayed cart info
 }
 
