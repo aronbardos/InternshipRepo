@@ -1,6 +1,7 @@
 package com.evozon.tests;
 
-import com.evozon.steps.UserSteps;
+import com.evozon.steps.AllSteps;
+import com.evozon.steps.LinksSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
@@ -9,20 +10,20 @@ import org.junit.runner.RunWith;
 @RunWith(SerenityRunner.class)
 public class LinksTest extends BaseTest {
     @Steps
-    public UserSteps userSteps;
+    public LinksSteps linksSteps;
 
     /*Tests*/
     @Test
     public void verifyHomepageHomeDecorCategoryLink() {
-        userSteps.verifyHomepageHomeDecorCategoryLink();
+        linksSteps.verifyHomepageHomeDecorCategoryLink();
     }
     @Test
     public void verifyHomepagePrivateSalesCategoryLink() {
-        userSteps.verifyHomepagePrivateSalesCategoryLink();
+        linksSteps.verifyHomepagePrivateSalesCategoryLink();
     }
     @Test
     public void verifyHomepageTravelGearCategoryLink() {
-        userSteps.verifyHomepageTravelGearCategoryLink();
+        linksSteps.verifyHomepageTravelGearCategoryLink();
     }
 
 }

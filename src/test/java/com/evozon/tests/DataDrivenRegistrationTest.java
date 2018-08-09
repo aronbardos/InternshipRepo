@@ -1,6 +1,7 @@
 package com.evozon.tests;
 
-import com.evozon.steps.UserSteps;
+import com.evozon.steps.AllSteps;
+import com.evozon.steps.RegistrationSteps;
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.junit.annotations.UseTestDataFrom;
@@ -11,7 +12,7 @@ import org.junit.runner.RunWith;
 @UseTestDataFrom(value = "testdata/Test00_Register.csv")
 public class DataDrivenRegistrationTest extends BaseTest {
     @Steps
-    public UserSteps userSteps;
+    public RegistrationSteps registrationSteps;
 
     /*CSV fields*/
     String firstname;
@@ -23,6 +24,6 @@ public class DataDrivenRegistrationTest extends BaseTest {
     /*Tests*/
     @Test
     public void registrateSpecificUser() {
-        userSteps.registrate(firstname, lastname, email, password, confirmation);
+        registrationSteps.registrate(firstname, lastname, email, password, confirmation);
     }
 }

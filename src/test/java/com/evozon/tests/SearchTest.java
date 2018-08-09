@@ -1,6 +1,7 @@
 package com.evozon.tests;
 
-import com.evozon.steps.UserSteps;
+import com.evozon.steps.AllSteps;
+import com.evozon.steps.SearchSteps;
 import com.evozon.utils.Constants;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
@@ -10,20 +11,20 @@ import org.junit.runner.RunWith;
 @RunWith(SerenityRunner.class)
 public class SearchTest extends BaseTest {
     @Steps
-    public UserSteps userSteps;
+    public SearchSteps searchSteps;
 
     /*Tests*/
     @Test
     public void searchByFullName() {
-        userSteps.searchByName(Constants.QUERY_CHELSEA_TEE);
+        searchSteps.searchByName(Constants.QUERY_CHELSEA_TEE);
     }
     @Test
     public void searchByKeyword() {
-        userSteps.searchByKeyword(Constants.QUERY_EYEGLASSES);
+        searchSteps.searchByKeyword(Constants.QUERY_EYEGLASSES);
     }
     @Test
     public void searchResultContainsOnlyRelevantProducts() {
-        userSteps.searchResultContainsOnlyRelevantProducts(Constants.QUERY_CHELSEA_TEE);
+        searchSteps.searchResultContainsOnlyRelevantProducts(Constants.QUERY_CHELSEA_TEE);
     }
 
     //TODO: search by category

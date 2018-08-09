@@ -1,7 +1,8 @@
 package com.evozon.tests;
 
 import com.evozon.entities.User;
-import com.evozon.steps.UserSteps;
+import com.evozon.steps.AllSteps;
+import com.evozon.steps.LoginSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Ignore;
@@ -13,26 +14,26 @@ import static com.evozon.factories.UserFactory.generateUser;
 @RunWith(SerenityRunner.class)
 public class LoginTest extends BaseTest {
     @Steps
-    public UserSteps userSteps;
+    public LoginSteps loginSteps;
 
     /*Tests*/
     @Test
     public void loginWithInvalidCredentials() {
         User user = generateUser();
-        userSteps.loginWithInvalidCredentials(user.getEmail(), user.getPassword());
+        loginSteps.loginWithInvalidCredentials(user.getEmail(), user.getPassword());
     }
     @Test
     public void loginWithOnlyEmailAddressFieldFilled() {
         User user = generateUser();
-        userSteps.loginWithOnlyEmailAddressFieldFilled(user.getEmail());
+        loginSteps.loginWithOnlyEmailAddressFieldFilled(user.getEmail());
     }
     @Test
     public void loginWithOnlyPasswordFieldFilled() {
         User user = generateUser();
-        userSteps.loginWithOnlyPasswordFieldFilled(user.getPassword());
+        loginSteps.loginWithOnlyPasswordFieldFilled(user.getPassword());
     }
     @Ignore
     public void isWelcomeMessageDisplayedInHeader() {
-        userSteps.isWelcomeMessageDisplayed();
+        loginSteps.isWelcomeMessageDisplayed();
     }
 }

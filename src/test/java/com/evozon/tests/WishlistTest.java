@@ -1,6 +1,7 @@
 package com.evozon.tests;
 
-import com.evozon.steps.UserSteps;
+import com.evozon.steps.AllSteps;
+import com.evozon.steps.WishlistSteps;
 import com.evozon.utils.Constants;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
@@ -10,15 +11,15 @@ import org.junit.runner.RunWith;
 @RunWith(SerenityRunner.class)
 public class WishlistTest extends BaseTest {
     @Steps
-    public UserSteps userSteps;
+    public WishlistSteps wishlistSteps;
 
     /*Tests*/
     @Test
     public void addProductToWishlist() {
-        userSteps.addProductToWishlist(Constants.NEW_PRODUCT_ELIZABETH_KNIT_TOP);
+        wishlistSteps.addProductToWishlist(Constants.NEW_PRODUCT_ELIZABETH_KNIT_TOP);
     }
     public void accessWishlistFromHeader() {
-        userSteps.accessWishlistFromHeader();
+        wishlistSteps.accessWishlistFromHeader();
     }
 
     //TODO: Check displayed info

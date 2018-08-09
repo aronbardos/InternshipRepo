@@ -1,7 +1,8 @@
 package com.evozon.tests;
 
 import com.evozon.entities.CheckoutUser;
-import com.evozon.steps.UserSteps;
+import com.evozon.steps.AllSteps;
+import com.evozon.steps.CheckoutSteps;
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.junit.annotations.UseTestDataFrom;
@@ -12,7 +13,7 @@ import org.junit.runner.RunWith;
 @UseTestDataFrom(value = "testdata/Test03_Checkout.csv")
 public class DataDrivenCheckoutTest extends BaseTest {
     @Steps
-    public UserSteps userSteps;
+    public CheckoutSteps checkoutSteps;
 
     /*CSV fields*/
     String firstname;
@@ -29,6 +30,6 @@ public class DataDrivenCheckoutTest extends BaseTest {
     @Test
     public void placeOrder() {
         CheckoutUser checkoutUser = new CheckoutUser(firstname, lastname, address, email, city, postalcode, phone, state, country);
-        userSteps.placeOrder(checkoutUser);
+        checkoutSteps.placeOrder(checkoutUser);
     }
 }

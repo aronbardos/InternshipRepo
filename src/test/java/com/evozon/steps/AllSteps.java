@@ -8,7 +8,7 @@ import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
-public class UserSteps {
+public class AllSteps {
     /*Pages*/
     private CartPage         cartPage;
     private CatalogPage      catalogPage;
@@ -21,7 +21,6 @@ public class UserSteps {
     private RegistrationPage registrationPage;
     private WishlistPage     wishlistPage;
 
-    /*Steps*/
     /*Regional*/
     @Step
     public void changeLanguage(final String changeToLanguage) {
@@ -125,6 +124,7 @@ public class UserSteps {
         checkoutPage.waitForOrderProcessing();
         Assert.assertTrue(checkoutPage.isOrderSuccessful());
     }
+    @Step
     public void placeOrder(CheckoutUser checkoutUser) {
         addRandomNewProductToCart();
         cartPage.proceedToCheckout();
@@ -194,6 +194,7 @@ public class UserSteps {
     }
 
     /*Messages*/
+    @Step
     public void isWelcomeMessageDisplayed() {
         //TODO: Remove hardcoded parts later
         loginWithValidCredentials(Constants.VALID_EMAIL_ADDRESS, Constants.VALID_PASSWORD);
