@@ -18,7 +18,6 @@ public class CartTest extends BaseTest {
     }
 
     //TODO: Modify the quantity of an item
-    //TODO: Add multiple products
     //TODO: Check displayed cart info
 }
 

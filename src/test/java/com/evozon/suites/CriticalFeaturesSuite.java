@@ -9,7 +9,8 @@ import org.junit.runners.Suite;
         RegistrationTest.class,
         LoginTest.class,
         CartTest.class,
-        CheckoutTest.class
+        CheckoutTest.class,
+        SearchTest.class
 })
 public class CriticalFeaturesSuite {
 }

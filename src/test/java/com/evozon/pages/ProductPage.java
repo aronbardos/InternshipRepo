@@ -3,6 +3,7 @@ package com.evozon.pages;
 import com.evozon.utils.Constants;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
@@ -14,6 +15,10 @@ public class ProductPage extends PageObject {
     private WebElement selectSizeButton;
     @FindBy(css = ".add-to-cart-buttons [title='Add to Cart']")
     private WebElement addToCartButton;
+
+    /*Links*/
+    @FindBy(css = "a[class='link-wishlist']")
+    private WebElement addToWishlistLink;
 
     /*Selections*/
     public void selectColor() {
@@ -31,5 +36,8 @@ public class ProductPage extends PageObject {
     public void clickAddToCart() {
         addToCartButton.click();
         Assert.assertEquals(getDriver().getCurrentUrl(), Constants.URL_CART);
+    }
+    public void clickAddToWishlist() {
+        addToWishlistLink.click();
     }
 }

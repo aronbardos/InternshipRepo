@@ -23,8 +23,10 @@ public class HeaderPage extends PageObject {
     /*Links*/
     @FindBy(css = "a[title='Log In']")
     private WebElement loginLink;
-    @FindBy(css = "[title=Register]")
+    @FindBy(css = "a[title='Register']")
     private WebElement registerLink;
+    @FindBy(css = "a[title='Wishlist']")
+    private WebElement wishlistLink;
 
     /*Texts*/
     @FindBy(css = "h2")
@@ -85,5 +87,8 @@ public class HeaderPage extends PageObject {
     }
     public void clickSearchbarButton() {
         searchbarButton.click();
+    }
+    public void clickWishlistOption() {
+        wishlistLink.click();
     }
 }

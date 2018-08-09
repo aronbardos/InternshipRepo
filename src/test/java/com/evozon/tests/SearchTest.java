@@ -14,8 +14,12 @@ public class SearchTest extends BaseTest {
 
     /*Tests*/
     @Test
-    public void searchByName() {
+    public void searchByFullName() {
         userSteps.searchByName(Constants.QUERY_CHELSEA_TEE);
+    }
+    @Test
+    public void searchByKeyword() {
+        userSteps.searchByKeyword(Constants.QUERY_EYEGLASSES);
     }
     @Test
     public void searchResultContainsOnlyRelevantProducts() {

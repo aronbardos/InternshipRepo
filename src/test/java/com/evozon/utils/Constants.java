@@ -7,8 +7,8 @@ public class Constants {
     public static final String URL_SUCCESSFUL_ORDER        = "http://qa1.dev.evozon.com/checkout/onepage/success/";
     public static final String URL_MY_ACCOUNT              = "http://qa1.dev.evozon.com/customer/account/";
     public static final String URL_REGISTER                = "http://qa1.dev.evozon.com/customer/account/create/";
-    public static final String URL_LOGIN                   = "http://qa1.dev.evozon.com/customer/account/loginWithValidCredentials/";
     public static final String URL_SUCCESSFUL_REGISTRATION = "http://qa1.dev.evozon.com/customer/account/index/";
+    public static final String URL_WISHLIST                = "http://qa1.dev.evozon.com/wishlist/index/index/";
 
     /*Language options*/
     public static final String LANGUAGE_ENG = "English";
@@ -29,6 +29,10 @@ public class Constants {
 
     /*Queries*/
     public static final String QUERY_CHELSEA_TEE = "chelsea tee";
+    public static final String QUERY_EYEGLASSES  = "eyeglasses";
+
+    /*New Products*/
+    public static final String NEW_PRODUCT_ELIZABETH_KNIT_TOP = "elizabeth knit top";
 
     /*CSV*/
     public static final String    CSV_FILE_PATH = "src/test/resources/testdata/";

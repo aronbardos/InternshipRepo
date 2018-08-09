@@ -7,14 +7,20 @@ import net.thucydides.core.pages.PageObject;
 import java.util.List;
 
 public class CatalogPage extends PageObject {
-    //@FindBy(css = "ul[class='products-grid products-grid--max-3-col first last odd']")
     @FindBy(css = "h2[class='product-name']")
     private List<WebElementFacade> displayedProductList;
 
     /*Verifications*/
-    public boolean isProductFound(String query) {
+    public boolean isProductFoundByFullName(String query) {
         for(WebElementFacade element: displayedProductList) {
-            if (element.getText().equalsIgnoreCase(query)) ;
+            if (element.getText().equalsIgnoreCase(query))
+                return true;
+        }
+        return false;
+    }
+    public boolean isProductFoundByKeyword(String query) {
+        for(WebElementFacade element: displayedProductList) {
+            if (element.getText().contains(query.toUpperCase()))
                 return true;
         }
         return false;

@@ -7,22 +7,33 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
 
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 //TODO: flexible mathods
 
 @DefaultUrl(Constants.URL_BASE)
 public class HomePage extends PageObject {
-    /*Texts*/
-    @FindBy(css = "h2")
-    private WebElementFacade newProductsTitle;
-
     /*Links*/
-    @FindBy(css = "[title~=Chelsea]")
-    private WebElement newProduct;
+    @FindBy(css = "img[alt='Elizabeth Knit Top']")
+    private WebElement newproduct1;
+    @FindBy(css = "img[alt='Chelsea Tee']")
+    private WebElement newProduct2;
+    @FindBy(css = "h3[class='product-name']")
+    private List<WebElementFacade> newProductsList;
 
     /*Selections*/
-    public void selectNewProduct() {
-        newProduct.click();
+    public void selectNewProduct1() {
+        newproduct1.click();
+    }
+    public void selectNewProduct2() {
+        newProduct2.click();
+    }
+    public void selectNewProduct(String productName) {
+        for (WebElementFacade element: newProductsList) {
+            if (element.getText().equalsIgnoreCase(productName)); {
+                element.click();
+                return;
+            }
+        }
     }
 }

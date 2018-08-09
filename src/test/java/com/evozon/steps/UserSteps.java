@@ -4,21 +4,22 @@ import com.evozon.entities.User;
 import com.evozon.pages.*;
 import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.StepGroup;
 import org.junit.Assert;
 
 public class UserSteps {
     /*Pages*/
-    private HomePage         homePage;
-    private RegistrationPage registrationPage;
-    private ProductPage      productPage;
-    private HeaderPage       headerPage;
     private CartPage         cartPage;
-    private CheckoutPage     checkoutPage;
-    private LoginPage        loginPage;
     private CatalogPage      catalogPage;
+    private CheckoutPage     checkoutPage;
+    private HeaderPage       headerPage;
+    private HomePage         homePage;
+    private LoginPage        loginPage;
+    private ProductPage      productPage;
+    private RegistrationPage registrationPage;
+    private WishlistPage     wishlistPage;
 
     /*Steps*/
+    /*Regional*/
     @Step
     public void changeLanguage(final String changeToLanguage) {
         homePage.open();
@@ -89,7 +90,7 @@ public class UserSteps {
     @Step
     public void addProductToCart() {
         homePage.open();
-        homePage.selectNewProduct();
+        homePage.selectNewProduct2();
         productPage.selectOptions();
         productPage.clickAddToCart();
         Assert.assertTrue(cartPage.isProductSuccessfullyAdded());
@@ -115,13 +116,23 @@ public class UserSteps {
     }
 
     /*Search*/
+    @Step
     public void searchByName(String query) {
         homePage.open();
         headerPage.clickSearchbar();
         headerPage.fillSearchbar(query);
         headerPage.clickSearchbarButton();
-        Assert.assertTrue(catalogPage.isProductFound(query));
+        Assert.assertTrue(catalogPage.isProductFoundByFullName(query));
     }
+    @Step
+    public void searchByKeyword(String query) {
+        homePage.open();
+        headerPage.clickSearchbar();
+        headerPage.fillSearchbar(query);
+        headerPage.clickSearchbarButton();
+        Assert.assertTrue(catalogPage.isProductFoundByKeyword(query));
+    }
+    @Step
     public void searchResultContainsOnlyRelevantProducts(String query) {
         homePage.open();
         headerPage.clickSearchbar();
@@ -130,10 +141,20 @@ public class UserSteps {
         Assert.assertTrue(catalogPage.isOnlyRelevantProductsFound(query));
     }
 
-    /*StepGroups*/
-    @StepGroup
-    public void orderItem(){
-        addProductToCart();
-        placeOrder();
+    /*Wishlist*/
+    @Step
+    public void addProductToWishlist(String productName) {
+        //hardcoded login, cause verification is not the point here
+        loginWithValidCredentials(Constants.VALID_EMAIL_ADDRESS, Constants.VALID_PASSWORD);
+        homePage.open();
+        homePage.selectNewProduct(productName);
+        productPage.clickAddToWishlist();
+        Assert.assertTrue(wishlistPage.isProductInWishlist(productName));
+    }
+    @Step
+    public void accessWishlistFromHeader() {
+        loginWithValidCredentials(Constants.VALID_EMAIL_ADDRESS, Constants.VALID_PASSWORD);
+        headerPage.clickWishlistOption();
+        Assert.assertTrue(wishlistPage.isPageOpened());
     }
 }
